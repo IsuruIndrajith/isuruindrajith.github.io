@@ -18,7 +18,7 @@ export default function NotFound() {
         <p className="text-lg text-gray-600 dark:text-gray-300">
           The page you're looking for doesn't exist.
         </p>
-        <Link href="/" className="mt-4 px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+        <Link href="/" className="mt-4 cta-button">
           Return to Homepage
         </Link>
       </motion.div>

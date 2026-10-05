@@ -1,70 +1,159 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: [0.16, 1, 0.3, 1],
+    },
+  },
+};
 
 export default function Hero() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  });
+
+  const titleY = useTransform(scrollYProgress, [0, 1], [0, -80]);
+  const subtitleY = useTransform(scrollYProgress, [0, 1], [0, -40]);
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.6], [1, 0.95]);
+
   return (
-    <section className="min-h-[100vh] flex flex-col items-center justify-center gap-8 px-6 pb-20">
-      {/* Animated entrance */}
+    <section
+      ref={ref}
+      id="hero"
+      className="relative min-h-[100vh] flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-16 overflow-hidden"
+    >
+      {/* Background gradient glow */}
+      <div className="absolute inset-0 bg-gradient-hero pointer-events-none" />
+
+      {/* Ambient glow orb */}
       <motion.div
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: -20, opacity: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-center space-y-4"
+        className="absolute top-[10%] right-[15%] w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(252, 196, 56, 0.06) 0%, transparent 70%)',
+        }}
+        animate={{ scale: [1, 1.1, 1], opacity: [0.4, 0.7, 0.4] }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+      />
+
+      <motion.div
+        style={{ y: titleY, opacity, scale }}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="relative z-10 max-w-5xl"
       >
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-          Isuru Edirisinghe
-        </h1>
-        <h2 className="text-2xl md:text-3xl font-semibold text-gray-600">
-          Backend & DevOps engineer who ships code from commit to production.
-        </h2>
-        <p className="text-lg max-w-xl">
-          {/* One-line proof from CLAUDE.md */}
-          6 microservices, 1 EKS cluster, 3 CI/CD pipelines, shipped
-        </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          {/* Open to work badge */}
-          <div className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-medium animate-pulse">
-            Open to work
+        {/* Status badge */}
+        <motion.div variants={childVariants} className="mb-8">
+          <div className="accent-tag">
+            <span className="relative flex h-2 w-2 mr-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+            </span>
+            Available from November 2026
           </div>
+        </motion.div>
 
-          {/* Download CV buttons */}
-          <div className="flex gap-2">
-            <Link href="/resume/se" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              Download SE CV
-            </Link>
-            <Link href="/resume/devops" className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              Download DevOps CV
-            </Link>
-          </div>
+        {/* Main heading */}
+        <motion.h1
+          variants={childVariants}
+          className="font-display text-display mb-6"
+        >
+          <span className="block text-cream-light">Backend &</span>
+          <span className="block text-gradient">DevOps Engineer</span>
+        </motion.h1>
 
-          {/* Social links */}
-          <div className="flex gap-2">
-            <Link
-              href="https://github.com/IsuruIndrajith"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 transition-colors"
-            >
-              Github
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/isuru-edirisinghe"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 transition-colors"
-            >
-              LinkedIn
-            </Link>
-            <Link
-              href="mailto:isuruindrajith680@gmail.com"
-              className="flex items-center gap-1 px-3 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 transition-colors"
-            >
-              Email
-            </Link>
-          </div>
+        {/* Subtitle */}
+        <motion.div style={{ y: subtitleY }}>
+          <motion.p
+            variants={childVariants}
+            className="text-body-lg text-cream/60 max-w-xl mb-10 leading-relaxed"
+          >
+            I ship code from commit to production. Building scalable microservices, 
+            orchestrating Kubernetes clusters, and automating everything in between.
+          </motion.p>
+        </motion.div>
+
+        {/* CTA Buttons */}
+        <motion.div
+          variants={childVariants}
+          className="flex flex-wrap items-center gap-4"
+        >
+          <Link href="#projects" className="cta-button">
+            View My Work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7V17" />
+            </svg>
+          </Link>
+          <Link href="#contact" className="outline-button">
+            Get in Touch
+          </Link>
+        </motion.div>
+
+        {/* Social links */}
+        <motion.div
+          variants={childVariants}
+          className="flex items-center gap-6 mt-12"
+        >
+          <a
+            href="https://github.com/IsuruIndrajith"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline text-sm text-cream/50 hover:text-accent"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/isuru-edirisinghe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline text-sm text-cream/50 hover:text-accent"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="mailto:isuruindrajith680@gmail.com"
+            className="link-underline text-sm text-cream/50 hover:text-accent"
+          >
+            Email
+          </a>
+        </motion.div>
+      </motion.div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        animate={{ y: [0, 8, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <div className="w-5 h-8 border border-cream/20 rounded-full flex items-start justify-center pt-1.5">
+          <motion.div
+            className="w-1 h-1.5 bg-accent rounded-full"
+            animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          />
         </div>
       </motion.div>
     </section>

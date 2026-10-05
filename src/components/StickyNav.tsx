@@ -34,7 +34,7 @@ export default function StickyNav() {
       initial={{ y: -10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700"
+      className="fixed top-0 left-0 right-0 z-50 bg-surface/80 dark:bg-surface/70 backdrop-blur-sm border-b border-[rgba(208,197,171,0.1)] dark:border-[rgba(208,197,171,0.2)]"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-wrap items-center justify-between h-16">
@@ -46,7 +46,7 @@ export default function StickyNav() {
             transition={{ duration: 0.4, delay: 0.05 }}
             className="flex items-center space-x-2"
           >
-            <Link href="/" className="text-2xl font-bold text-gray-900 dark:text-gray-100 hover:no-underline">
+            <Link href="/" className="text-2xl font-bold text-cream/90 dark:text-cream/90 hover:no-underline">
               Isuru Edirisinghe
             </Link>
           </motion.div>
@@ -61,9 +61,9 @@ export default function StickyNav() {
           >
             {navItems.map((item) => {
               const isActive = pathname === item.href || pathname.startsWith(item.href.split('#')[0]) && item.href.startsWith('#');
-              const baseClasses = "text-sm font-medium text-gray-600 dark:text-gray-300";
-              const activeClasses = "text-blue-600 dark:text-blue-400 border-b-2 border-blue-500 dark:border-blue-400";
-              const inactiveClasses = "hover:text-gray-800 dark:hover:text-gray-200 transition-colors";
+              const baseClasses = "text-sm font-medium text-cream/60 dark:text-cream/50";
+              const activeClasses = "text-accent dark:text-accent border-b-2 border-accent/20 dark:border-accent/30";
+              const inactiveClasses = "hover:text-cream/80 dark:hover:text-cream/70 transition-colors";
 
               return (
                 <Link
@@ -98,11 +98,11 @@ export default function StickyNav() {
             {/* Resume button */}
             <Link
               href="/resume/se"
-              className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
+              className="cta-button"
             >
               Download SE Resume
             </Link>
-            </motion.div>
+          </motion.div>
 
           {/* Mobile Menu Button */}
           <motion.div
@@ -113,10 +113,10 @@ export default function StickyNav() {
             className="md:hidden"
           >
             <button
-              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="p-2 rounded-lg hover:bg-cream/10 dark:hover:bg-cream/20"
               aria-label="Open menu"
             >
-              <svg className="w-5 h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-cream/80 dark:text-cream/60 hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>

@@ -47,7 +47,7 @@ export default function ProjectsPage() {
                     </p>
                     <div className="flex flex-wrap gap-2 mb-3">
                       {project.stack.backend?.slice(0, 3).map((tech, index) => (
-                        <span key={index} className="px-2 py-0.5 bg-blue-100 text-blue-800 text-xs dark:bg-blue-200 dark:text-blue-800 rounded">
+                        <span key={index} className="px-2 py-0.5 bg-cream/20 text-cream/90 dark:bg-cream/30 dark:text-cream/90 rounded">
                           {tech}
                         </span>
                       ))}

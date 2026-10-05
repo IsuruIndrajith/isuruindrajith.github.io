@@ -22,7 +22,7 @@ export default function ResumePage() {
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8 flex flex-col items-center border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
+            className="glass-card p-8 flex flex-col items-center hover:shadow-md transition-shadow duration-300"
           >
             <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
               Software Engineering Resume
@@ -34,7 +34,7 @@ export default function ResumePage() {
             <a
               href="/docs/CV_SE.md"
               download="Isuru_Edirisinghe_SE_Resume.md"
-              className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors w-full text-center"
+              className="cta-button w-full text-center"
             >
               Download SE Resume (Markdown)
             </a>
@@ -45,7 +45,7 @@ export default function ResumePage() {
             initial={{ x: 20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.1 }}
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-8 flex flex-col items-center border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-300"
+            className="glass-card p-8 flex flex-col items-center hover:shadow-md transition-shadow duration-300"
           >
             <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
               DevOps/Cloud Engineering Resume
@@ -57,7 +57,7 @@ export default function ResumePage() {
             <a
               href="/docs/CV_DevOps.md"
               download="Isuru_Edirisinghe_DevOps_Resume.md"
-              className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors w-full text-center"
+              className="cta-button w-full text-center"
             >
               Download DevOps Resume (Markdown)
             </a>

@@ -1,33 +1,33 @@
 'use client';
 
+import Reveal from '@/components/Reveal';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import contactData from '@/content/contact.json';
 
 export default function ContactSection() {
   return (
-    <section className="px-6 pb-20 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto">
-        <header className="mb-12 text-center">
-          <h2 className="text-3xl font-bold">Get in Touch</h2>
-          <p className="mt-2 text-gray-500">
-            Open to new-grad Software Engineer or DevOps Engineer roles from November 2026
-          </p>
-        </header>
+    <section id="contact" className="py-24 px-6 md:px-12 lg:px-24">
+      <div className="max-w-6xl mx-auto">
+        {/* Section header */}
+        <Reveal className="mb-16">
+          <span className="section-label mb-4 block">Connect</span>
+          <h2 className="font-display text-heading text-cream-light mb-4">
+            Get in Touch
+          </h2>
+        </Reveal>
 
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid gap-8"
-        >
-          <div className="grid-cols-1 lg:grid-cols-2">
-            {/* Contact Information */}
-            <div className="space-y-4">
-              <p className="text-sm font-medium text-gray-700 dark:text-gray-200">
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* Contact Information */}
+          <Reveal delay={0.1}>
+            <div className="glass-card p-6 md:p-8 h-full">
+              <h3 className="text-lg font-semibold text-cream-light mb-6 flex items-center gap-2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-accent">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                </svg>
                 Contact Information
-              </p>
-              <div className="space-y-3">
+              </h3>
+              <div className="space-y-4">
                 <motion.div
                   key="email"
                   initial={{ x: -10, opacity: 0 }}
@@ -36,15 +36,13 @@ export default function ContactSection() {
                   className="flex items-start space-x-3"
                 >
                   <div className="flex-shrink-0 mt-1">
-                    <span className="w-2 h-2 bg-blue-500 rounded dark:bg-blue-400"></span>
+                    <span className="w-2 h-2 rounded-full bg-accent/60" />
                   </div>
                   <div className="flex-1 space-y-0.5">
-                    <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                      Email
-                    </p>
+                    <p className="text-sm font-medium text-cream/80">Email</p>
                     <a
                       href={`mailto:${contactData.email}`}
-                      className="text-blue-600 hover:underline dark:text-blue-400 break-all"
+                      className="text-cream hover:text-accent/80 break-all"
                     >
                       {contactData.email}
                     </a>
@@ -59,17 +57,15 @@ export default function ContactSection() {
                   className="flex items-start space-x-3"
                 >
                   <div className="flex-shrink-0 mt-1">
-                    <span className="w-2 h-2 bg-blue-500 rounded dark:bg-blue-400"></span>
+                    <span className="w-2 h-2 rounded-full bg-accent/60" />
                   </div>
                   <div className="flex-1 space-y-0.5">
-                    <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                      LinkedIn
-                    </p>
+                    <p className="text-sm font-medium text-cream/80">LinkedIn</p>
                     <a
                       href={contactData.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline dark:text-blue-400 break-all"
+                      className="text-cream hover:text-accent/80 break-all"
                     >
                       linkedin.com/in/isuru-edirisinghe
                     </a>
@@ -84,17 +80,15 @@ export default function ContactSection() {
                   className="flex items-start space-x-3"
                 >
                   <div className="flex-shrink-0 mt-1">
-                    <span className="w-2 h-2 bg-blue-500 rounded dark:bg-blue-400"></span>
+                    <span className="w-2 h-2 rounded-full bg-accent/60" />
                   </div>
                   <div className="flex-1 space-y-0.5">
-                    <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                      GitHub
-                    </p>
+                    <p className="text-sm font-medium text-cream/80">GitHub</p>
                     <a
                       href={contactData.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:underline dark:text-blue-400 break-all"
+                      className="text-cream hover:text-accent/80 break-all"
                     >
                       github.com/IsuruIndrajith
                     </a>
@@ -109,15 +103,11 @@ export default function ContactSection() {
                   className="flex items-start space-x-3"
                 >
                   <div className="flex-shrink-0 mt-1">
-                    <span className="w-2 h-2 bg-blue-500 rounded dark:bg-blue-400"></span>
+                    <span className="w-2 h-2 rounded-full bg-accent/60" />
                   </div>
                   <div className="flex-1 space-y-0.5">
-                    <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                      Availability
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      {contactData.availability}
-                    </p>
+                    <p className="text-sm font-medium text-cream/80">Availability</p>
+                    <p className="text-xs text-cream/50">{contactData.availability}</p>
                   </div>
                 </motion.div>
 
@@ -129,51 +119,46 @@ export default function ContactSection() {
                   className="flex items-start space-x-3"
                 >
                   <div className="flex-shrink-0 mt-1">
-                    <span className="w-2 h-2 bg-blue-500 rounded dark:bg-blue-400"></span>
+                    <span className="w-2 h-2 rounded-full bg-accent/60" />
                   </div>
                   <div className="flex-1 space-y-0.5">
-                    <p className="text-sm font-medium text-gray-800 dark:text-gray-200">
-                      Location
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      {contactData.location}
-                    </p>
+                    <p className="text-sm font-medium text-cream/80">Location</p>
+                    <p className="text-xs text-cream/50">{contactData.location}</p>
                   </div>
                 </motion.div>
               </div>
             </div>
+          </Reveal>
 
-            {/* Call to Action */}
-            <motion.div
-              key="cta"
-              initial={{ x: 10, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 text-center border border-gray-100 dark:border-gray-700"
-            >
-              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
-                Ready to discuss opportunities?
-              </p>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
+          {/* Call to Action */}
+          <Reveal delay={0.2}>
+            <div className="glass-card p-6 md:p-8">
+              <h3 className="text-lg font-semibold text-cream-light mb-6 flex items-center gap-2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-accent">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Let's Connect
+              </h3>
+              <p className="text-sm text-cream/60 mb-6">
                 I'm interested in backend engineering, DevOps, and cloud infrastructure roles where I can contribute to scalable, reliable systems.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/resume/se"
-                  className="flex-1 px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                  className="flex-1 px-5 py-3 bg-accent/20 text-cream rounded-lg hover:bg-accent/30 transition-colors font-medium"
                 >
                   Download SE Resume
                 </Link>
                 <Link
                   href="/resume/devops"
-                  className="flex-1 px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+                  className="flex-1 px-5 py-3 bg-accent/20 text-cream rounded-lg hover:bg-accent/30 transition-colors font-medium"
                 >
                   Download DevOps Resume
                 </Link>
               </div>
-            </motion.div>
-          </div>
-        </motion.div>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
