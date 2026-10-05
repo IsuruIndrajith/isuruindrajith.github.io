@@ -1,0 +1,101 @@
+{
+  "categories": [
+    {
+      "name": "Languages",
+      "items": [
+        { "name": "Java", "level": "Advanced", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot", "automated-examination-system", "ai-powered-research-assistant"] },
+        { "name": "JavaScript", "level": "Advanced", "usedIn": ["three-tier-eks-gitops", "ai-powered-research-assistant", "scribbly-note-sharing-platform"] },
+        { "name": "Python", "level": "Intermediate", "usedIn": ["budgetstack-flask-expense-tracker", "next-ora-global-experience", "automated-experience-soft-internship"] },
+        { "name": "PHP", "level": "Intermediate", "usedIn": ["di-11-soft-internship", "cv-general-experience"] },
+        { "name": "SQL", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker", "automated-examination-system"] }
+      ]
+    },
+    {
+      "name": "Backend",
+      "items": [
+        { "name": "Spring Boot", "level": "Advanced", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot", "automated-examination-system", "ai-powered-research-assistant"] },
+        { "name": "Spring Security", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "bidsafe-concurrency-safe-bidding", "automated-examination-system"] },
+        { "name": "Spring Data JPA/Hibernate", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "bidsafe-concurrency-safe-bidding"] },
+        { "name": "Spring Cloud", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven"] },
+        { "name": "Express.js", "level": "Intermediate", "usedIn": ["three-tier-eks-gitops", "di-11-soft-internship", "cv-general-experience", "scribbly-note-sharing-platform"] },
+        { "name": "Laravel", "level": "Intermediate", "usedIn": ["di-11-soft-internship", "cv-general-experience"] },
+        { "name": "Node.js", "level": "Intermediate", "usedIn": ["three-tier-eks-gitops", "di-11-soft-internship", "cv-general-experience"] },
+        { "name": "Flask", "level": "Intermediate", "usedIn": ["budgetstack-flask-expense-tracker"] },
+        { "name": "REST APIs", "level": "Advanced", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot", "automated-examination-system", "di-11-soft-internship", "cv-general-experience"] },
+        { "name": "Microservices", "level": "Advanced", "usedIn": ["distributed-microservices-event-driven"] },
+        { "name": "WebSocket/STOMP", "level": "Intermediate", "usedIn": ["bidsafe-concurrency-safe-bidding"] },
+        { "name": "JWT", "level": "Intermediate", "usedIn": ["bidsafe-concurrency-safe-bidding", "automated-examination-system", "scribbly-note-sharing-platform"] },
+        { "name": "RBAC", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "di-11-soft-internship", "cv-general-experience", "scribbly-note-sharing-platform"] },
+        { "name": "Resilience4j", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven"] },
+        { "name": "Testcontainers", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "cloud-native-cicd-spring-boot"] },
+        { "name": "Jib", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven"] }
+      ]
+    },
+    {
+      "name": "Cloud & DevOps",
+      "items": [
+        { "name": "AWS", "level": "Advanced", "usedIn": ["three-tier-eks-gitops", "cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "EC2", "level": "Intermediate", "usedIn": ["cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "EKS", "level": "Advanced", "usedIn": ["three-tier-eks-gitops"] },
+        { "name": "VPC", "level": "Intermediate", "usedIn": ["three-tier-eks-gitops"] },
+        { "name": "Route 53", "level": "Intermediate", "usedIn": ["three-tier-eks-gitops"] },
+        { "name": "Docker", "level": "Advanced", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "Kubernetes", "level": "Advanced", "usedIn": ["three-tier-eks-gitops"] },
+        { "name": "Helm", "level": "Intermediate", "usedIn": ["three-tier-eks-gitops"] },
+        { "name": "Argo CD", "level": "Advanced", "usedIn": ["three-tier-eks-gitops"] },
+        { "name": "GitOps", "level": "Advanced", "usedIn": ["three-tier-eks-gitops"] },
+        { "name": "Jenkins", "level": "Intermediate", "usedIn": ["cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "GitLab CI", "level": "Intermediate", "usedIn": ["cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "GitHub Actions", "level": "Intermediate", "usedIn": ["budgetstack-flask-expense-tracker"] },
+        { "name": "GitHub Webhooks", "level": "Intermediate", "usedIn": ["budgetstack-flask-expense-tracker"] },
+        { "name": "NGINX", "level": "Intermediate", "usedIn": ["cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "SSL/HTTPS", "level": "Intermediate", "usedIn": ["cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "SonarQube", "level": "Intermediate", "usedIn": ["cloud-native-cicd-spring-boot"] },
+        { "name": "Maven", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "cloud-native-cicd-spring-boot", "bidsafe-concurrency-safe-bidding", "automated-examination-system"] },
+        { "name": "Git", "level": "Intermediate", "usedIn": ["all-projects"] },
+        { "name": "Linux/Ubuntu", "level": "Intermediate", "usedIn": ["cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "Bash/Shell", "level": "Intermediate", "usedIn": ["cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "Prometheus", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot"] },
+        { "name": "Grafana", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot"] },
+        { "name": "Micrometer", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot"] },
+        { "name": "Resilience4J", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "bidsafe-concurrency-safe-bidding"] },
+        { "name": "Testcontainers", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "cloud-native-cicd-spring-boot"] }
+      ]
+    },
+    {
+      "name": "Data",
+      "items": [
+        { "name": "MySQL", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "PostgreSQL", "level": "Intermediate", "usedIn": ["cloud-native-cicd-spring-boot", "budgetstack-flask-expense-tracker"] },
+        { "name": "MongoDB", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "budgetstack-flask-expense-tracker", "scribbly-note-sharing-platform"] },
+        { "name": "Redis", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "bidsafe-concurrency-safe-bidding"] }
+      ]
+    },
+    {
+      "name": "Observability & Testing",
+      "items": [
+        { "name": "JUnit", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot", "automated-examination-system"] },
+        { "name": "Testcontainers", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "cloud-native-cicd-spring-boot", "automated-examination-system"] },
+        { "name": "Selenium", "level": "Intermediate", "usedIn": ["automated-examination-system", "scribbly-note-sharing-platform"] },
+        { "name": "Prometheus", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot"] },
+        { "name": "Grafana", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot"] },
+        { "name": "Micrometer", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "three-tier-eks-gitops", "bidsafe-concurrency-safe-bidding", "cloud-native-cicd-spring-boot"] },
+        { "name": "Test-Driven Development", "level": "Intermediate", "usedIn": ["all-projects"] },
+        { "name": "Agile/Scrum", "level": "Intermediate", "usedIn": ["di-11-soft-internship", "next-ora-global-internship", "automated-examination-system", "cv-general-experience"] },
+        { "name": "Code Reviews", "level": "Intermediate", "usedIn": ["di-11-soft-internship", "next-ora-global-internship", "automated-examination-system"] }
+      ]
+    },
+    {
+      "name": "Security",
+      "items": [
+        { "name": "OAuth2", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven"] },
+        { "name": "OIDC", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven"] },
+        { "name": "Keycloak", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven"] },
+        { "name": "JWT", "level": "Intermediate", "usedIn": ["bidsafe-concurrency-safe-bidding", "automated-examination-system", "scribbly-note-sharing-platform"] },
+        { "name": "RBAC", "level": "Intermediate", "usedIn": ["distributed-microservices-event-driven", "di-11-soft-internship", "cv-general-experience", "scribbly-note-sharing-platform"] },
+        { "name": "Version Control (Git)", "level": "Intermediate", "usedIn": ["all-projects"] },
+        { "name": "Secure Coding Practices", "level": "Intermediate", "usedIn": ["all-projects"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "education": [
+    {
+      "institution": "University of Jaffna",
+      "degree": "BSc (Hons) Computer Engineering",
+      "status": "Degree requirements completed, formal conferral pending",
+      "duration": "2022 - 2026",
+      "location": "Jaffna, Sri Lanka",
+      "relevantCoursework": ["Microservices Architecture", "Distributed Systems", "Cloud Computing", "Software Engineering"]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "DevOps Foundations: Infrastructure as Code",
+      "issuer": "LinkedIn Learning",
+      "date": "Mar 2026",
+      "credentialId": "see-certificate"
+    },
+    {
+      "name": "Introduction to DevOps",
+      "issuer": "IBM via Coursera",
+      "date": "Sep 2026",
+      "credentialId": "see-certificate"
+    }
+  ],
+  "competitions": [
+    {
+      "name": "IEEE Xtreme 18.0",
+      "role": "Participant",
+      "date": "Oct 2024",
+      "achievement": "Global rank 1,248",
+      "location": "Online"
+    },
+    {
+      "name": "Yarl Xtreme",
+      "role": "Winner",
+      "date": "Oct 2024",
+      "achievement": "1st Place",
+      "location": "Jaffna, Sri Lanka"
+    },
+    {
+      "name": "MoraXtreme 9.0",
+      "role": "Participant",
+      "date": "Nov 2024",
+      "achievement": "Local Rank 61",
+      "location": "Colombo, Sri Lanka"
+    }
+  ],
+  "volunteering": [
+    {
+      "organization": "IEEE ComSoc Student Branch Chapter, University of Jaffna",
+      "role": "Volunteer",
+      "duration": "2024 – 2026",
+      "activities": ["Co-organized ComSoc Summer School 2025 technical session series"]
+    },
+    {
+      "organization": "Sasnaka Sansada Foundation",
+      "role": "Volunteer",
+      "duration": "2021 – 2022",
+      "activities": ["Authored 25+ educational resources for foundation's online learning platform (90% positive user feedback)"]
+    }
+  ]
+}

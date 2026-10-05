@@ -1,0 +1,11 @@
+# robots.txt for Isuru Edirisinghe's Portfolio
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://my-portfolio.vercel.app/sitemap.xml
+
+# Disallow private or sensitive paths (if any were added)
+# Disallow: /api/
+# Disallow: /admin/

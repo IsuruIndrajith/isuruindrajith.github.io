@@ -1,0 +1,404 @@
+[
+  {
+    "title": "Distributed Microservices System (Event-Driven)",
+    "slug": "distributed-microservices-event-driven",
+    "featured": true,
+    "order": 1,
+    "problem": "Need for scalable, independently deployable backend services with loose coupling and fault tolerance",
+    "architecture": {
+      "diagram": "/assets/distributed-microservices-architecture.svg",
+      "description": "Six independently deployable Spring Boot microservices communicating via Apache Kafka, secured by Keycloak/OAuth2, with observability through Prometheus/Grafana"
+    },
+    "role": "Solo Backend Developer",
+    "decisions": [
+      {
+        "decision": "Use Spring Cloud Netflix Eureka for service discovery",
+        "alternatives": ["Consul", "etcd", "AWS Cloud Map"],
+        "tradeOffs": "Eureka offers tight Spring Boot integration but adds JVM-based infrastructure overhead"
+      },
+      {
+        "decision": "Use Apache Kafka for event-driven communication",
+        "alternatives": ["RabbitMQ", "Amazon SQS", "Apache Pulsar"],
+        "tradeOffs": "Kafka provides high throughput and replayability but requires operational expertise for ZooKeeper management"
+      },
+      {
+        "decision": "Implement Resilience4j for fault tolerance",
+        "alternatives": ["Hystrix", "Spring Retry", "custom retry logic"],
+        "tradeOffs": "Resilience4j is lightweight and modular but adds dependency overhead"
+      }
+    ],
+    "stack": {
+      "backend": ["Java 17", "Spring Boot 3.5", "Spring Cloud (Eureka, Gateway)", "Spring Security", "Spring Data JPA"],
+      "database": ["MongoDB", "MySQL"],
+      "messaging": ["Apache Kafka"],
+      "security": ["Keycloak", "OAuth2", "OIDC", "Resilience4j"],
+      "observability": ["Prometheus", "Grafana", "Micrometer"],
+      "containerization": ["Docker", "Google Jib"],
+      "orchestration": ["Docker Compose"],
+      "testing": ["JUnit", "Testcontainers", "Maven"],
+      "build": ["Maven"]
+    },
+    "improvements": [
+      "Add API versioning strategy",
+      "Implement schema registry for Kafka topics",
+      "Add distributed tracing with Jaeger or Zipkin",
+      "Implement circuit breaker monitoring dashboard"
+    ],
+    "links": {
+      "github": "https://github.com/IsuruIndrajith/Spring-Microservice-Monorepo.git"
+    },
+    "status": "completed",
+    "duration": "Jan 2026 - Present",
+    "teamSize": 1
+  },
+  {
+    "title": "Three-Tier App on AWS EKS with GitOps",
+    "slug": "three-tier-eks-gitops",
+    "featured": true,
+    "order": 2,
+    "problem": "Need for reproducible, observable cloud infrastructure with automated deployment pipelines",
+    "architecture": {
+      "diagram": "/assets/three-tier-eks-architecture.svg",
+      "description": "React frontend, Node.js API, MongoDB database deployed as containerized workloads on AWS EKS via Argo CD GitOps"
+    },
+    "role": "Solo Backend Developer",
+    "decisions": [
+      {
+        "decision": "Use Argo CD for GitOps continuous delivery",
+        "alternatives": ["Flux", "Jenkins X", "custom CI/CD pipelines"],
+        "tradeOffs": "Argo CD provides Kubernetes-native declarative deployments but requires learning GitOps principles"
+      },
+      {
+        "decision": "Use AWS EKS for managed Kubernetes",
+        "alternatives": ["Self-managed K8s on EC2", "Google GKE", "Azure AKS"],
+        "tradeOffs": "EKS reduces operational burden but offers less control than self-managed clusters"
+      },
+      {
+        "decision": "Use MongoDB StatefulSet with PersistentVolumes",
+        "alternatives": ["Amazon DocumentDB", "self-managed MongoDB on EC2", "Redis for caching layer"],
+        "tradeOffs": "StatefulSets provide stable network identities and persistent storage but add complexity to backup/restore procedures"
+      }
+    ],
+    "stack": {
+      "frontend": ["React", "JavaScript/ES6"],
+      "backend": ["Node.js", "Express.js"],
+      "database": ["MongoDB"],
+      "infrastructure": ["AWS EKS", "AWS VPC", "AWS Route 53"],
+      "gitops": ["Argo CD", "Helm"],
+      "containerization": ["Docker"],
+      "networking": ["NGINX ingress controller"],
+      "security": ["TLS/SSL via Let's Encrypt"],
+      "observability": ["Prometheus", "Grafana"],
+      "iac": ["Terraform", "AWS CloudFormation"],
+      "build": ["npm", "yarn"]
+    },
+    "improvements": [
+      "Add service mesh (Istio/Linkerd) for traffic management",
+      "Implement backup/restore procedures for MongoDB",
+      "Add horizontal pod autoscaling based on custom metrics",
+      "Implement blue/green deployment strategy"
+    ],
+    "links": {
+      "github": "https://github.com/IsuruIndrajith/3-Tier-WebApp-K8s-GitOps.git"
+    },
+    "status": "completed",
+    "duration": "Jan 2026 - Present",
+    "teamSize": 1
+  },
+  {
+    "title": "BidSafe - Real-Time Bidding Platform with Concurrency Safety",
+    "slug": "bidsafe-concurrency-safe-bidding",
+    "featured": true,
+    "order": 3,
+    "problem": "Race conditions in concurrent bidding systems leading to duplicate bids, inventory overselling, and financial discrepancies",
+    "architecture": {
+      "diagram": "/assets/bidsafe-concurrency-architecture.svg",
+      "description": "Spring Boot API with layered locking strategy (pessimistic + optimistic + Redis distributed) for bid processing safety"
+    },
+    "role": "Solo Backend Developer",
+    "decisions": [
+      {
+        "decision": "Implement triple-layer locking strategy",
+        "alternatives": ["Single locking mechanism", "database transactions only", "application-level locking only"],
+        "tradeOffs": "Multiple locking mechanisms add complexity but provide redundant safety guarantees"
+      },
+      {
+        "decision": "Use Idempotency-Key for exactly-once processing",
+        "alternatives": ["client-generated UUIDs", "server-generated timestamps", "request ID headers"],
+        "tradeOffs": "Idempotency-Key provides explicit deduplication but requires client cooperation"
+      },
+      {
+        "decision": "Use Bucket4j for rate limiting",
+        "alternatives": ["Redis-based rate limiting", "custom token bucket", "API gateway rate limiting"],
+        "tradeOffs": "Bucket4j offers in-memory simplicity but doesn't scale to multiple instances without Redis backend"
+      }
+    ],
+    "stack": {
+      "backend": ["Java 17", "Spring Boot 4.1.1", "Spring Security", "Spring Data JPA/Hibernate"],
+      "database": ["MySQL 8.0"],
+      "caching": ["Redis"],
+      "messaging": ["WebSocket", "STOMP"],
+      "security": ["JWT"],
+      "observability": ["Micrometer", "Prometheus", "Grafana"],
+      "containerization": ["Docker"],
+      "testing": ["JUnit", "Maven"],
+      "build": ["Maven"]
+    },
+    "improvements": [
+      "Add bid retraction/cancellation workflow",
+      "Implement bid analytics dashboard",
+      "Add WebSocket heartbeat mechanism",
+      "Implement snapshot isolation for audit trails"
+    ],
+    "links": {
+      "github": "https://github.com/IsuruIndrajith/BidSafe-Real-time-bidding-platform-with-concurrency-safe-bids"
+    },
+    "status": "completed",
+    "duration": "Jan 2026 - Present",
+    "teamSize": 1
+  },
+  {
+    "title": "Cloud-Native CI/CD Pipeline for Spring Boot",
+    "slug": "cloud-native-cicd-spring-boot",
+    "featured": true,
+    "order": 4,
+    "problem": "Manual, error-prone deployment processes slowing down release cycles and increasing failure rates",
+    "architecture": {
+      "diagram": "/assets/cicd-pipeline-architecture.svg",
+      "description": "Jenkins/GitLab CI/CD pipeline automating build, test, security scan, containerization, and deployment to AWS EC2"
+    },
+    "role": "Solo Backend Developer",
+    "decisions": [
+      {
+        "decision": "Use Jenkins/GitLab for CI/CD orchestration",
+        "alternatives": ["GitHub Actions", "CircleCI", " Travis CI"],
+        "tradeOffs": "Self-hosted runners provide full control but require maintenance overhead"
+      },
+      {
+        "decision": "Integrate SonarQube for static code analysis",
+        "alternatives": ["ESLint/Checkstyle only", "CodeQL", "custom linting rules"],
+        "tradeOffs": "SonarQube provides comprehensive quality gates but adds pipeline execution time"
+      },
+      {
+        "decision": "Use NGINX as reverse proxy with SSL termination",
+        "alternatives": ["AWS ALB", "HAProxy", "Traefik"],
+        "tradeOffs": "NGINX offers high performance and flexibility but requires manual SSL certificate management"
+      }
+    ],
+    "stack": {
+      "backend": ["Java", "Spring Boot", "Maven"],
+      "ci_cd": ["Jenkins", "GitLab CI", "GitHub Webhooks"],
+      "code_quality": ["SonarQube"],
+      "containerization": ["Docker"],
+      "infrastructure": ["AWS EC2", "NGINX", "PostgreSQL"],
+      "security": ["SSL/TLS certificates"],
+      "testing": ["JUnit", "Testcontainers"],
+      "build": ["Maven"]
+    },
+    "improvements": [
+      "Add blue/green deployment capability",
+      "Implement pipeline caching for faster builds",
+      "Add automated rollback on deployment failure",
+      "Implement canary deployment strategy"
+    ],
+    "links": {
+      "github": "https://github.com/IsuruIndrajith/My-CICD-project.git"
+    },
+    "status": "completed",
+    "duration": "Jan 2025 - Present",
+    "teamSize": 1
+  },
+  {
+    "title": "BudgetStack - Flask Expense Tracker with Automated CI/CD",
+    "slug": "budgetstack-flask-expense-tracker",
+    "featured": false,
+    "order": 5,
+    "problem": "Manual deployment processes for web applications causing delays and inconsistent environments",
+    "architecture": {
+      "diagram": "/assets/budgetstack-ci-cd-architecture.svg",
+      "description": "Flask/Mysql application with automated deployment via GitHub Webhooks → GitHub Actions → Jenkins → EC2"
+    },
+    "role": "Solo Backend Developer",
+    "decisions": [
+      {
+        "decision": "Use GitHub Webhooks to trigger CI/CD pipeline",
+        "alternatives": ["GitHub Actions only", "GitLab CI only", "manual deployment scripts"],
+        "tradeOffs": "Webhook-based triggering provides flexibility but adds dependency on GitHub availability"
+      },
+      {
+        "decision": "Implement swap space and health checks for EC2",
+        "alternatives": ["upgrade EC2 instance size", "use Elastic Beanstalk", "use AWS Lambda"],
+        "tradeOffs": "Swap + health checks is cost-effective but requires monitoring and tuning"
+      },
+      {
+        "decision": "Use Docker Compose for local development",
+        "alternatives": ["virtualenv/venv", "pipenv", "poetry"],
+        "tradeOffs": "Docker Compose ensures environment consistency but adds container overhead"
+      }
+    ],
+    "stack": {
+      "backend": ["Python", "Flask"],
+      "database": ["MySQL"],
+      "ci_cd": ["GitHub Webhooks", "GitHub Actions", "Jenkins", "Docker Compose"],
+      "infrastructure": ["AWS EC2 (Ubuntu)", "Bash"],
+      "containerization": ["Docker", "Docker Compose"],
+      "testing": ["pytest"],
+      "build": ["pip"]
+    },
+    "improvements": [
+      "Add user authentication and authorization",
+      "Implement expense categorization with ML",
+      "Add multi-currency support",
+      "Implement expense sharing/splitting features"
+    ],
+    "links": {
+      "github": "https://github.com/IsuruIndrajith/BudgetStack-Flask-application.git"
+    },
+    "status": "completed",
+    "duration": "Jan 2026 - Present",
+    "teamSize": 1
+  },
+  {
+    "title": "Automated Examination System",
+    "slug": "automated-examination-system",
+    "featured": false,
+    "order": 6,
+    "problem": "Manual examination processes are time-consuming, error-prone, and lack instant feedback mechanisms",
+    "architecture": {
+      "diagram": "/assets/automated-examination-system-architecture.svg",
+      "description": "Role-based examination system with Spring Boot REST backend and React frontend"
+    },
+    "role": "Team Leader & Backend Developer",
+    "decisions": [
+      {
+        "decision": "Use Agile/Scrum methodology for team coordination",
+        "alternatives": ["Waterfall", "Kanban", "Scrumban"],
+        "tradeOffs": "Agile/Scrum provides adaptability but requires disciplined ceremony adherence"
+      },
+      {
+        "decision": "Use JWT for stateless authentication",
+        "alternatives": ["session-based auth", "OAuth2", "API keys"],
+        "tradeOffs": "JWT enables horizontal scaling but requires secure secret key management"
+      },
+      {
+        "decision": "Use Selenium WebDriver for end-to-end testing",
+        "alternatives": ["Cypress", "Playwright", "manual testing"],
+        "tradeOffs": "Selenium provides cross-browser testing but has steeper learning curve and flakiness"
+      }
+    ],
+    "stack": {
+      "backend": ["Java", "Spring Boot", "Spring Security", "JWT", "JPA/Hibernate", "REST APIs"],
+      "frontend": ["React.js"],
+      "testing": ["Selenium WebDriver", "JUnit"],
+      "build": ["Maven", "npm"]
+    },
+    "improvements": [
+      "Add adaptive question difficulty based on user performance",
+      "Implement proctoring features for remote exams",
+      "Add analytics dashboard for educators",
+      "Implement mobile-responsive design"
+    ],
+    "links": {
+      "github": "https://github.com/IsuruIndrajith/Automated-Examination-System.git"
+    },
+    "status": "completed",
+    "duration": "Jan 2025 - Dec 2025",
+    "teamSize": 4
+  },
+  {
+    "title": "AI-Powered Research Assistant",
+    "slug": "ai-powered-research-assistant",
+    "featured": false,
+    "order": 7,
+    "problem": "Researchers spend excessive time manually summarizing papers and extracting key insights from academic literature",
+    "architecture": {
+      "diagram": "/assets/ai-research-assistant-architecture.svg",
+      "description": "Chrome Extension frontend with reactive Spring Boot backend integrating Google Gemini API"
+    },
+    "role": "Solo Full-Stack Developer",
+    "decisions": [
+      {
+        "decision": "Use Chrome Extension for browser integration",
+        "alternatives": ["web app", "desktop application", "mobile app"],
+        "tradeOffs": "Chrome Extension provides contextual help but is limited to Chrome browser"
+      },
+      {
+        "decision": "Use Google Gemini API for AI summarization",
+        "alternatives": ["GPT-4", "Claude", "open-source LLMs"],
+        "tradeOffs": "Gemini offers strong reasoning capabilities but requires API usage and has rate limits"
+      },
+      {
+        "decision": "Use Spring WebFlux for reactive backend",
+        "alternatives": ["Spring MVC", "Node.js/Express", "Python/FastAPI"],
+        "tradeOffs": "WebFlux provides non-blocking I/O but has steeper learning curve"
+      }
+    ],
+    "stack": {
+      "frontend": ["Chrome Extension", "JavaScript/ES6"],
+      "backend": ["Spring Boot", "Java 17", "Spring WebFlux", "Google Gemini API"],
+      "communication": ["RESTful APIs"],
+      "build": ["Maven"]
+    },
+    "improvements": [
+      "Add citation extraction and bibliography generation",
+      "Implement collaborative annotation features",
+      "Add support for multiple document formats (PDF, EPUB)",
+      "Implement offline mode with local caching"
+    ],
+    "links": {
+      "github": "https://github.com/IsuruIndrajith/smart-research-assistence-extenstion.git"
+    },
+    "status": "completed",
+    "duration": "Jan 2026 - Present",
+    "teamSize": 1
+  },
+  {
+    "title": "Scribbly Note Sharing Platform",
+    "slug": "scribbly-note-sharing-platform",
+    "featured": false,
+    "order": 8,
+    "problem": "Students and professionals lack efficient ways to share, organize, and collaborate on lecture notes and study materials",
+    "architecture": {
+      "diagram": "/assets/scribbly-note-sharing-architecture.svg",
+      "description": "Secure RESTful backend with MVC architecture, JWT authentication, and cloud storage integration"
+    },
+    "role": "Full-Stack Freelance Developer",
+    "decisions": [
+      {
+        "decision": "Use MVC architecture for separation of concerns",
+        "alternatives": ["monolithic structure", "microservices", "serverless functions"],
+        "tradeOffs": "MVC provides clear structure but may not scale to extremely high complexity"
+      },
+      {
+        "decision": "Use JWT for stateless authentication",
+        "alternatives": ["session-based auth", "OAuth2", "API keys"],
+        "tradeOffs": "JWT enables horizontal scaling but requires secure secret key management"
+      },
+      {
+        "decision": "Use Cloudinary for media storage and transformation",
+        "alternatives": ["AWS S3", "Google Cloud Storage", "self-hosted file server"],
+        "tradeOffs": "Cloudinary provides rich media features but adds third-party dependency and cost"
+      }
+    ],
+    "stack": {
+      "backend": ["Node.js", "Express.js"],
+      "database": ["MongoDB"],
+      "storage": ["Cloudinary"],
+      "security": ["JWT", "RBAC"],
+      "authentication": ["GitHub", "Google"],
+      "build": ["npm"]
+    },
+    "improvements": [
+      "Add real-time collaborative editing",
+      "Implement spell check and grammar suggestions",
+      "Add note versioning and history",
+      "Implement AI-powered note summarization"
+    ],
+    "links": {
+      "github": "https://github.com/IsuruIndrajith/Scribbly---class-note-sharing-platform.git"
+    },
+    "status": "completed",
+    "duration": "Jan 2025 - Dec 2025",
+    "teamSize": 1
+  }
+]

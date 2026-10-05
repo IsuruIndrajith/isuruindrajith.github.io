@@ -1,0 +1,86 @@
+[
+  {
+    "company": "DI 11 Soft (Pvt) Ltd",
+    "position": "Software engineer intern",
+    "location": "Rajagiriya, Sri Lanka",
+    "duration": {
+      "start": "Oct 2025",
+      "end": "Aug 2026"
+    },
+    "type": "internship",
+    "description": "Developed backend systems and REST APIs for enterprise inventory management solutions",
+    "achievements": [
+      {
+        "action": "Built",
+        "what": "a multi-tenant inventory REST API",
+        "how": "with versioned (v1/v2) layers across 20+ modules including stock, billing and real-time dashboards, secured by role- and user-level permissions",
+        "outcome": "enabled scalable inventory management for multiple clients"
+      },
+      {
+        "action": "Developed",
+        "what": "a Laravel 12/PHP 8.2 REST API",
+        "how": "for a wholesale inventory system covering B2B/B2C orders, invoicing, warranty claims and stock, with RBAC and audit logging across 47+ Eloquent models",
+        "outcome": "streamlined wholesale operations with automated workflows"
+      },
+      {
+        "action": "Developed",
+        "what": "REST APIs for an ERP-based Inventory Management System",
+        "how": "using Node.js and Express.js, covering sales analytics, inventory tracking and role-based access control (RBAC)",
+        "outcome": "provided real-time inventory visibility and sales insights"
+      },
+      {
+        "action": "Integrated",
+        "what": "TensorFlow.js regression models",
+        "how": "to deliver machine learning-driven sales forecasting, demand heatmaps and at-risk stock alerts",
+        "outcome": "enabled data-driven inventory planning and risk mitigation"
+      },
+      {
+        "action": "Debugged and resolved",
+        "what": "data-integrity issues in a Python invoice-automation pipeline",
+        "how": "integrating an internal ERP with the Zoho Books REST API, including duplicate customer mapping, invoice filtering and failed-invoice error reporting",
+        "outcome": "ensured accurate financial reporting and reduced reconciliation efforts"
+      },
+      {
+        "action": "Participated",
+        "what": "in Git-based code reviews and collaborative development",
+        "how": "within Agile/Scrum workflows, reviewing changes and addressing implementation issues",
+        "outcome": "maintained code quality and fostered team collaboration"
+      }
+    ],
+    "technologies": ["Java", "Spring Boot", "Node.js", "Express.js", "Laravel", "PHP", "TensorFlow.js", "Python", "Zoho Books API", "MySQL", "MongoDB", "PostgreSQL", "Redis", "Git", "Agile/Scrum"],
+    "visibility": "public"
+  },
+  {
+    "company": "Next Ora Global",
+    "position": "Software engineer intern",
+    "location": "Remote",
+    "duration": {
+      "start": "Dec 2025",
+      "end": "Aug 2026"
+    },
+    "type": "internship",
+    "description": "Built automation platforms for financial signal processing and technical content optimization",
+    "achievements": [
+      {
+        "action": "Built",
+        "what": "a Python scraping platform",
+        "how": "to extract Forex trading signals from 10+ Telegram channels and backtest their performance",
+        "outcome": "eliminated hours of manual monitoring and enabled data-driven trading decisions"
+      },
+      {
+        "action": "Authored",
+        "what": "SEO-optimized technical content",
+        "how": "for trading-tools and broker platforms",
+        "outcome": "increased organic search traffic and lifted affiliate conversions"
+      },
+      {
+        "action": "Conducted",
+        "what": "technical sales consultations",
+        "how": "with international clients (10+ daily), translating product capabilities into business value propositions",
+        "outcome": "increased international sales and customer satisfaction"
+      }
+    ],
+    "technologies": ["Python", "web scraping", "backtesting", "SEO", "technical writing", "sales consultation", "financial markets", "forex", "telegram"],
+    "visibility": "public"
+  }
+]
