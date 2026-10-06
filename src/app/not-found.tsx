@@ -16,7 +16,7 @@ export default function NotFound() {
           404 - Page Not Found
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-300">
-          The page you're looking for doesn't exist.
+          The page you&apos;re looking for doesn&apos;t exist.
         </p>
         <Link href="/" className="mt-4 cta-button">
           Return to Homepage

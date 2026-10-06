@@ -137,10 +137,10 @@ export default function ContactSection() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-accent">
                   <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                Let's Connect
+                Let&apos;s Connect
               </h3>
               <p className="text-sm text-cream/60 mb-6">
-                I'm interested in backend engineering, DevOps, and cloud infrastructure roles where I can contribute to scalable, reliable systems.
+                I&apos;m interested in backend engineering, DevOps, and cloud infrastructure roles where I can contribute to scalable, reliable systems.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
