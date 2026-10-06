@@ -15,7 +15,7 @@ export default function ExperienceTimeline() {
             Experience
           </h2>
           <p className="text-cream/50 max-w-lg">
-            Professional experience building backend systems and DevOps infrastructure.
+            Professional experience building Fullstack applications and DevOps infrastructure.
           </p>
         </Reveal>
 

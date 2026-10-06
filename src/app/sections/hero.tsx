@@ -81,7 +81,7 @@ export default function Hero() {
           variants={childVariants}
           className="font-display text-display mb-6"
         >
-          <span className="block text-cream-light">Backend &</span>
+          <span className="block text-cream-light">Software &</span>
           <span className="block text-gradient">DevOps Engineer</span>
         </motion.h1>
 

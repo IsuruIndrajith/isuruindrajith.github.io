@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Isuru Edirisinghe — Backend & DevOps Engineer',
-  description: 'Backend & DevOps engineer who ships code from commit to production. Java/Spring Boot microservices + AWS EKS/Kubernetes/GitOps/CI-CD. Open to new-grad roles from November 2026.',
+  title: 'Isuru Edirisinghe - Software & DevOps Engineer',
+  description: 'Software & DevOps engineer who ships code from commit to production. Java/Spring Boot microservices + AWS EKS/Kubernetes/GitOps/CI-CD. Open to new-grad roles.',
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
