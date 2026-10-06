@@ -13,7 +13,8 @@ build/
 .env*.local
 
 # Documentation & Markdown
-docs/
+/docs/
+!public/docs/
 *.md
 !README.md
 

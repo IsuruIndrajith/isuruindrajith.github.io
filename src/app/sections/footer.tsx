@@ -40,9 +40,9 @@ export default function Footer() {
         <p className="text-sm text-cream/60 mb-2">
           Built with Next.js, deployed via GitHub Actions
           <br />
-          <a href="https://github.com/IsuruIndrajith/my-portfolio-v2.git" className="text-accent hover:text-accent/80">
+          {/* <a href="https://github.com/IsuruIndrajith/my-portfolio-v2.git" className="text-accent hover:text-accent/80">
             Source code on GitHub
-          </a>
+          </a> */}
         </p>
         <p className="text-xs text-cream/40">
           © {new Date().getFullYear()} Isuru Edirisinghe. All rights reserved.
