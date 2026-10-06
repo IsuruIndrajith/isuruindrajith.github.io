@@ -6,7 +6,7 @@
     "order": 1,
     "problem": "Need for scalable, independently deployable backend services with loose coupling and fault tolerance",
     "architecture": {
-      "diagram": "/assets/distributed-microservices-architecture.svg",
+      "diagram": "/assets/distributed-microservices-architecture.png",
       "description": "Six independently deployable Spring Boot microservices communicating via Apache Kafka, secured by Keycloak/OAuth2, with observability through Prometheus/Grafana"
     },
     "role": "Solo Backend Developer",
@@ -58,7 +58,7 @@
     "order": 2,
     "problem": "Need for reproducible, observable cloud infrastructure with automated deployment pipelines",
     "architecture": {
-      "diagram": "/assets/three-tier-eks-architecture.svg",
+      "diagram": "/assets/three-tier-eks-architecture.png",
       "description": "React frontend, Node.js API, MongoDB database deployed as containerized workloads on AWS EKS via Argo CD GitOps"
     },
     "role": "Solo Backend Developer",
@@ -112,7 +112,7 @@
     "order": 3,
     "problem": "Race conditions in concurrent bidding systems leading to duplicate bids, inventory overselling, and financial discrepancies",
     "architecture": {
-      "diagram": "/assets/bidsafe-concurrency-architecture.svg",
+      "diagram": "/assets/bidsafe-concurrency-architecture.png",
       "description": "Spring Boot API with layered locking strategy (pessimistic + optimistic + Redis distributed) for bid processing safety"
     },
     "role": "Solo Backend Developer",
@@ -164,7 +164,7 @@
     "order": 4,
     "problem": "Manual, error-prone deployment processes slowing down release cycles and increasing failure rates",
     "architecture": {
-      "diagram": "/assets/cicd-pipeline-architecture.svg",
+      "diagram": "/assets/cicd-pipeline-architecture.png",
       "description": "Jenkins/GitLab CI/CD pipeline automating build, test, security scan, containerization, and deployment to AWS EC2"
     },
     "role": "Solo Backend Developer",
@@ -215,7 +215,7 @@
     "order": 5,
     "problem": "Manual deployment processes for web applications causing delays and inconsistent environments",
     "architecture": {
-      "diagram": "/assets/budgetstack-ci-cd-architecture.svg",
+      "diagram": "/assets/budgetstack-ci-cd-architecture.png",
       "description": "Flask/Mysql application with automated deployment via GitHub Webhooks → GitHub Actions → Jenkins → EC2"
     },
     "role": "Solo Backend Developer",
@@ -359,7 +359,7 @@
     "order": 8,
     "problem": "Students and professionals lack efficient ways to share, organize, and collaborate on lecture notes and study materials",
     "architecture": {
-      "diagram": "/assets/scribbly-note-sharing-architecture.svg",
+      "diagram": "/assets/scribbly-note-sharing-architecture.png",
       "description": "Secure RESTful backend with MVC architecture, JWT authentication, and cloud storage integration"
     },
     "role": "Full-Stack Freelance Developer",
