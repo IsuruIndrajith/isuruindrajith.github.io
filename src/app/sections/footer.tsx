@@ -38,9 +38,9 @@ export default function Footer() {
           </Link>
         </div>
         <p className="text-sm text-cream/60 mb-2">
-          Built with Next.js, deployed via GitHub Actions to Vercel
+          Built with Next.js, deployed via GitHub Actions
           <br />
-          <a href="https://github.com/IsuruIndrajith/my-portfolio" className="text-accent hover:text-accent/80">
+          <a href="https://github.com/IsuruIndrajith/my-portfolio-v2.git" className="text-accent hover:text-accent/80">
             Source code on GitHub
           </a>
         </p>

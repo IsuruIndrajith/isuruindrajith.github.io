@@ -1,10 +1,56 @@
 {
-  "medium": {
-    "username": "isuruindrajith680",
-    "feedUrl": "https://medium.com/feed/@isuruindrajith680",
-    "latestPosts": [],
-    "note": "Medium blog available but no recent posts to display"
-  },
-  "blogPlaceholder": false,
-  "message": "Professional writing and technical blog posts available at medium.com/@isuruindrajith680"
+  "articles": [
+    {
+      "title": "Two Bids, One Millisecond: Making a Java Bidding Platform Concurrency-Safe",
+      "subtitle": "What I learned building BidSafe, a real-time auction platform with Spring Boot, MySQL and Redis.",
+      "url": "https://medium.com/@isuruindrajith680/two-bids-one-millisecond-making-a-java-bidding-platform-concurrency-safe-42bfd5e3374e?sharedUserId=isuruindrajith680",
+      "platform": "Medium",
+      "tags": ["Java", "Spring Boot", "Redis", "Concurrency"],
+      "featured": true
+    },
+    {
+      "title": "The Missing Links in Microservices: Discovery, Gateways, and Security",
+      "subtitle": "When transitioning from monolithic applications to microservices, we solve the problem of scaling, but we introduce a new challenge: network complexity. As the number of services grows, how do they find each other? How do we secure them? And what happens when one of them fails?",
+      "url": "https://medium.com/@isuruindrajith680/the-missing-links-in-microservices-discovery-gateways-and-security-0c62dca9cff7?sharedUserId=isuruindrajith680",
+      "platform": "Medium",
+      "tags": ["Microservices", "API Gateway", "Security"],
+      "featured": true
+    },
+    {
+      "title": "Microservice Inter-Service Communication",
+      "subtitle": "A deep dive into synchronous and asynchronous patterns for service-to-service communication in distributed systems.",
+      "url": "https://medium.com/@isuruindrajith680/microservice-interservice-communication-2511246cfbe3?sharedUserId=isuruindrajith680",
+      "platform": "Medium",
+      "tags": ["Microservices", "REST", "Messaging"],
+      "featured": false
+    },
+    {
+      "title": "Filter Chain - Spring Security",
+      "subtitle": "Understanding how Spring Security's filter chain intercepts requests and applies authentication and authorization.",
+      "url": "https://medium.com/@isuruindrajith680/filter-chain-spring-security-229636d6d7bc?sharedUserId=isuruindrajith680",
+      "platform": "Medium",
+      "tags": ["Spring Security", "Java", "Authentication"],
+      "featured": false
+    },
+    {
+      "title": "Mastering Dependency Injection in Spring Boot: A Beginner's Guide",
+      "subtitle": "A practical guide to understanding and applying Dependency Injection patterns in Spring Boot applications.",
+      "url": "https://medium.com/@isuruindrajith680/mastering-dependency-injection-in-spring-boot-a-beginners-guide-756a2f4b78cf?sharedUserId=isuruindrajith680",
+      "platform": "Medium",
+      "tags": ["Spring Boot", "Java", "Design Patterns"],
+      "featured": false
+    },
+    {
+      "title": "TensorFlow.js Workflow Explained: From Tensors to Predictions",
+      "subtitle": "A hands-on walkthrough of how TensorFlow.js handles data, builds models, and generates predictions in the browser.",
+      "url": "https://www.linkedin.com/pulse/tensorflowjs-workflow-explained-from-tensors-predictions-di11soft-5dfsc",
+      "platform": "LinkedIn",
+      "tags": ["TensorFlow.js", "Machine Learning", "JavaScript"],
+      "featured": false
+    }
+  ],
+  "profiles": {
+    "medium": "https://medium.com/@isuruindrajith680",
+    "linkedin": "https://www.linkedin.com/in/isuru-edirisinghe-387ab7278"
+  }
 }
