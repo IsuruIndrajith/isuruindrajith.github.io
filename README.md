@@ -147,41 +147,9 @@ See `.github/workflows/deploy.yml` (to be created) for:
 - No ESLint errors
 - All links valid (link checker)
 
-## Deployment
-
-### Vercel (Recommended)
-1. Connect GitHub repository to Vercel
-2. Configure build command: `npm run build`
-3. Configure output directory: `.next`
-4. Enable automatic deployments on push to main
-
-### Cloudflare Pages
-1. Connect GitHub repository to Cloudflare Pages
-2. Set build command: `npm run build`
-3. Set build output directory: `.next`
-4. Configure compatibility date for Node.js
-
 ### Environment Variables
 - `NEXT_PUBLIC_SITE_URL` - Base URL for absolute links
 - (Optional) Analytics: Plausible/Umami keys if enabled
-
-## Customization
-
-### Design System
-Design tokens are defined in `DESIGN.md` and can be customized in:
-- `tailwind.config.js` - Extend theme with colors, spacing, fonts
-- `src/app/globals.css` - Base styles and custom CSS
-- Section components in `src/app/sections/`
-
-### Adding New Sections
-1. Create component in `src/app/sections/`
-2. Import and add to `src/app/page.tsx`
-3. Add any required data to content JSON files
-
-### Adding Project Pages
-1. Add project data to `content/projects.json`
-2. Create content files if needed (assets, diagrams)
-3. The dynamic route `[slug]/page.tsx` will automatically generate the page
 
 ## Architecture Decisions
 
@@ -270,6 +238,5 @@ This portfolio is open source and available under the [MIT License](LICENSE).
 
 ---
 
-*Built with Next.js, deployed via GitHub Actions to Vercel*  
-*Source code: https://github.com/IsuruIndrajith/my-portfolio*  
+*Built with Next.js, deployed via GitHub Actions*   
 *Last updated: $(date)*
