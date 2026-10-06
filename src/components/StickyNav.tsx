@@ -96,9 +96,14 @@ export default function StickyNav() {
             </div>
 
             {/* Resume button */}
-            <Link href="/resume/se" className="cta-button text-sm py-2 px-5">
+            <a
+              href="/docs/Isuru_Edirisinghe_SE_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button text-sm py-2 px-5"
+            >
               Resume
-            </Link>
+            </a>
           </motion.div>
 
           {/* Mobile hamburger */}

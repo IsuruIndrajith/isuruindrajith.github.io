@@ -143,18 +143,22 @@ export default function ContactSection() {
                 I'm interested in backend engineering, DevOps, and cloud infrastructure roles where I can contribute to scalable, reliable systems.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/resume/se"
-                  className="flex-1 px-5 py-3 bg-accent/20 text-cream rounded-lg hover:bg-accent/30 transition-colors font-medium"
+                <a
+                  href="/docs/Isuru_Edirisinghe_SE_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 px-5 py-3 bg-accent/20 text-cream rounded-lg hover:bg-accent/30 transition-colors font-medium text-center"
                 >
-                  Download SE Resume
-                </Link>
-                <Link
-                  href="/resume/devops"
-                  className="flex-1 px-5 py-3 bg-accent/20 text-cream rounded-lg hover:bg-accent/30 transition-colors font-medium"
+                  View SE Resume
+                </a>
+                <a
+                  href="/docs/Isuru_Edirisinghe_DevOps_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 px-5 py-3 bg-accent/20 text-cream rounded-lg hover:bg-accent/30 transition-colors font-medium text-center"
                 >
-                  Download DevOps Resume
-                </Link>
+                  View DevOps Resume
+                </a>
               </div>
             </div>
           </Reveal>

@@ -67,11 +67,12 @@ export default function ResumePage() {
               Focused on backend development, Java/Spring Boot microservices, APIs, and distributed systems.
             </p>
             <a
-              href="/docs/CV_SE.md"
-              download="Isuru_Edirisinghe_SE_Resume.md"
+              href="/docs/Isuru_Edirisinghe_SE_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-button justify-center"
             >
-              Download SE Resume
+              View SE Resume
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
               </svg>
@@ -93,11 +94,12 @@ export default function ResumePage() {
               Focused on Kubernetes, CI/CD pipelines, GitOps, AWS EKS, and cloud-native infrastructure.
             </p>
             <a
-              href="/docs/CV_DevOps.md"
-              download="Isuru_Edirisinghe_DevOps_Resume.md"
+              href="/docs/Isuru_Edirisinghe_DevOps_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="cta-button justify-center"
             >
-              Download DevOps Resume
+              View DevOps Resume
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
               </svg>
@@ -111,7 +113,7 @@ export default function ResumePage() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-8 text-xs text-cream/25 text-center"
         >
-          Files are in Markdown format. PDF versions are generated from these sources.
+          PDFs open directly in your browser. Right-click → Save As to download.
         </motion.p>
       </div>
     </main>
