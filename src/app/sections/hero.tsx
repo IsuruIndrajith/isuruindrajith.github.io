@@ -72,7 +72,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
             </span>
-            Available from November 2026
+            Available for Full Time Opportunities
           </div>
         </motion.div>
 
@@ -126,7 +126,7 @@ export default function Hero() {
             GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/isuru-edirisinghe"
+            href="https://www.linkedin.com/in/isuru-edirisinghe-387ab7278"
             target="_blank"
             rel="noopener noreferrer"
             className="link-underline text-sm text-cream/50 hover:text-accent"

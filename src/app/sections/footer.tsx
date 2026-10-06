@@ -17,7 +17,7 @@ export default function Footer() {
             <span className="ml-2">GitHub</span>
           </Link>
           <Link
-            href="https://www.linkedin.com/in/isuru-edirisinghe"
+            href="https://www.linkedin.com/in/isuru-edirisinghe-387ab7278"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 bg-surface/20 text-cream/60 rounded-lg hover:bg-accent/20 transition-colors"

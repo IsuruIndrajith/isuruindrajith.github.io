@@ -67,7 +67,7 @@ export default function ContactSection() {
                       rel="noopener noreferrer"
                       className="text-cream hover:text-accent/80 break-all"
                     >
-                      linkedin.com/in/isuru-edirisinghe
+                      linkedin.com/in/isuru-edirisinghe-387ab7278
                     </a>
                   </div>
                 </motion.div>
